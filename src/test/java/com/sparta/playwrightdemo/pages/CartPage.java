@@ -22,7 +22,7 @@ public class CartPage {
                     .setItemLink(element.locator("a"))
                     .setTitle(element.locator(".inventory_item_name").textContent())
                     .setDescription(element.locator(".inventory_item_desc").textContent())
-                    .setPrice(Float.valueOf(element.locator(".inventory_item_price").textContent()))
+                    .setPrice(Float.valueOf(element.locator(".inventory_item_price").textContent().substring(1)))
                     .setRemoveButton(element.locator(".cart_button"))
                     .build();
 

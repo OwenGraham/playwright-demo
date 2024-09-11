@@ -140,7 +140,7 @@ public class InventoryStepDefs {
 
     @Then("the user should be redirected to the product's detail page")
     public void theUserShouldBeRedirectedToTheProductSDetailPage() {
-        Assertions.assertEquals("https://www.saucedemo.com/v1/inventory-item.html?id=4",testContext.page.url());
+        Assertions.assertEquals("https://www.saucedemo.com/inventory-item.html?id=4",testContext.page.url());
     }
 
     @And("the user should see detailed information about the product")

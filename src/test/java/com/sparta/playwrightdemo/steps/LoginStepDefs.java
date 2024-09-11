@@ -1,6 +1,7 @@
 package com.sparta.playwrightdemo.steps;
 
 import com.sparta.playwrightdemo.pages.LoginPage;
+import com.sparta.playwrightdemo.pages.WebPage;
 import com.sparta.playwrightdemo.utils.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -29,7 +30,7 @@ public class LoginStepDefs {
 
     @Then("the user should be redirected to the home page")
     public void theUserShouldBeRedirectedToTheHomePage() {
-        Assertions.assertEquals("https://www.saucedemo.com/v1/inventory.html",context.page.url());
+        Assertions.assertEquals(WebPage.valueOf("INVENTORY").getURL(),context.page.url());
     }
 
     @Then("the user should see an error message indicating incorrect credentials")
